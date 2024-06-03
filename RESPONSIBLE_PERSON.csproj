@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+	  <AWSProjectType>Lambda</AWSProjectType>
+
+	  <!-- This property makes the build directory similar to a publish directory and helps the AWS .NET Lambda Mock Test Tool find project dependencies. -->
+	  <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.Core" Version="2.2.0" />
+    <PackageReference Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.4.1" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.305.29" />
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OMS_AWS_API_CORE_31">
+      <HintPath>..\OMS_AWS_API_CORE\OMS_AWS_API_CORE\bin\Debug\net6.0\OMS_AWS_API_CORE_31.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
